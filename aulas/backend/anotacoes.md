@@ -56,3 +56,11 @@ destroy=destruir uma sessão;
 
 ___
 
+**Spot**
+
+Criação e listagem do spot, locais para trabalhar dentro das empresas desse usuario;
+
+Não são aceitos no formato JSON por isso foi usado no insomnia o multiForm, temos que deixar claro pro express os formatos que estão sendo utilizados;
+
+A bilbioteca que permite o upload de imagens é o ***multer***
+
