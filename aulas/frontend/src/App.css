@@ -1,38 +1,89 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* resetando estilizações que vem por padrão no css */
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*3 tags que estão por volta de todo o doc. 100% para ocupar a tela toda*/
+html,body, #root {
+  min-height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  background: #000000 url('./assets/background.jpg') no-repeat;
+  background-size: cover; /* imagem ocupa a tela toda */
+  -webkit-font-smoothing: antialiased !important;  /* deixa a fonte detalhada */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body, input, button {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif; /* ele tenta primeiro a fonte Roboto*/
+  font-size: 14px;
+}
+ /* alinhar tudo no centro da tela  */
+.container{
+  margin: 80px auto 0; /*põe tudo no meio da tela*/
+  max-width: 450px; 
+  width: 100%;
+  display: flex; /*itens flexíveis na tela independente do tamanho*/
+  flex-direction: column; /*um abaixo do outro*/
+  align-items: center; /*todos centralizados*/
+}
+
+.content{
+  width: 100%;
+  background: #ffffff;
+  margin-top: 50px; /*distanciar da logo*/
+  border-radius: 4px;
+  padding: 30px; /*espaçamento interno*/
+}
+
+/*estilizando o primeiro p do content*/
+.content > p {
+  font-size: 22px;
+  line-height: 30px;
+  margin-bottom: 30px;
+}
+
+/*todos os itens do form fiquem um abaixo do outro*/
+.content form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.content form label {
+  font-size: 14px;
+  color: #444444;
+  font-weight: bold;
+  margin-bottom: 8px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.content form input {
+  margin-bottom: 20px;
+  border: 1px solid #dddddd;
+  border-radius: 2px;
+  height: 45px;
+  padding: 0 15px; /*só nas laterais*/
+  font-size: 16px;
+}
+
+.content button.btn {
+  border: 0; /*tiro a borda padrão*/
+  border-radius: 2px;
+  width: 100%;
+  height: 42px;
+  padding: 0 20px;
+  font-size: 16px;
+  font-weight: bold;
+  background: #f05a5b;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/*quando o usuário passar o mouse por cima do botão, muda a cor dele*/
+.content button.btn:hover{
+  background: #e14f50;
 }
