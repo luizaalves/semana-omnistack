@@ -1,6 +1,7 @@
 //importar uma dependencia externa;
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors');
 const routes = require('./routes');
 
 
@@ -11,6 +12,7 @@ mongoose.connect('mongodb+srv://omnistack:omnistack@omnistack.q0cn4.mongodb.net/
     useUnifiedTopology:true,
 })
 
+app.use(cors({})); //qualquer aplicação acesse a api ou origin:'http://localhost:3333'
 //dizendo pro express que utiliza o formato json
 app.use(express.json());
 app.use(routes);
