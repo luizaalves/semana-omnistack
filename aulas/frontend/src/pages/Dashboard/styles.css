@@ -1,0 +1,34 @@
+
+ul.spot-list{
+    width: 100%;
+    list-style: none;/*tirar bolinhas automaticas*/
+    display: grid; 
+    grid-template-columns: 1fr 1fr; /*trabalhar com duas colunas com espaços iguais*/
+    grid-gap: 20px; /*espaçamento entre as colunas*/
+    margin-bottom: 30px;
+}
+
+/*cada informação do list uma debaixo da outra*/
+ul.spot-list li{
+     display: flex;
+     flex-direction: column;
+}
+
+/*onde fica a imagem*/
+ul.spot-list li header {
+    width: 100%;
+    height: 120px;
+    background-size: cover;
+    border-radius: 4px;
+}
+
+ul.spot-list li strong {
+    margin-top: 10px;
+    font-size: 24px;
+    color: #444444;
+}
+
+ul.spot-list li span {
+    font-size: 15px;
+    color: #999999;
+}
